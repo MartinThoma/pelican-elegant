@@ -236,4 +236,3 @@ Elegant is standing on the shoulders of these giants.
 1. [Solarized Light theme](http://ethanschoonover.com/solarized) converted to
    [Pelican Pygments](https://github.com/yuex/pelican-pygments-solarized-css)
    by [yuex 悟道洞穴人](https://github.com/yuex)
-

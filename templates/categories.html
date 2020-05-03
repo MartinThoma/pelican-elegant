@@ -5,7 +5,7 @@ All Categories · {{ super() }}
 {% endblock title %}
 
 {% block head_description %}
-All categories of the {{ SITENAME|striptags|e }} blog. 
+All categories of the {{ SITENAME|striptags|e }} blog.
 {% endblock head_description %}
 
 {% block meta_tags_in_head %}
@@ -51,7 +51,7 @@ All categories of the {{ SITENAME|striptags|e }} blog.
                 <div id="{{ category.slug }}-ref" class="accordion-body collapse">
                     <div class="accordion-inner">
                         <ul class="list-articles-category">
-                            {% for article in articles %} 
+                            {% for article in articles %}
                             <li><time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></li>
                             {% endfor %}
                         </ul>
@@ -74,6 +74,6 @@ All categories of the {{ SITENAME|striptags|e }} blog.
 </script>
 
 <script type="text/javascript" language="JavaScript">
-    uncollapse(); 
+    uncollapse();
 </script>
 {% endblock script %}
