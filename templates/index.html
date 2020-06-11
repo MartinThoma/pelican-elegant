@@ -87,14 +87,17 @@
     <div class="row">
         <div class="{{css_class}}">
             <header>
-            <h1 id="recent-posts">Recent Posts <a id="allposts" href="{{ SITEURL }}/archives.html">all posts</a></h1>
+            <h1 id="recent-posts">Recent Posts</h1>
             </header>
         <div class="recent-posts">
             {% for article in articles %}
             {% from '_includes/_defaults.html' import RECENT_ARTICLES_COUNT with context %}
             {% if loop.index0 < RECENT_ARTICLES_COUNT %}
             <article>
-                <!--<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
+                <!--
+                <a href="{{ SITEURL }}/{{ article.url }}" tabindex="-1"><img style="width:128px; height:128px;" src="{{ SITEURL }}/images/{{ article.featured_image }}" class="alignleft post_thumbnail wp-post-image" alt="{{ article.title }}"></a>
+                <h2 class="title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></h2>
+                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
                 <section>
                     posted in
                 <a href="{{ SITEURL }}/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>
@@ -105,12 +108,12 @@
                 <table class="transparent">
                 <tr>
                 <td style="width:128px;">
-                <a href="{{ SITEURL }}/{{ article.url }}"><img style="width:128px; height:128px;" src="{{ SITEURL }}/images/{{ article.featured_image }}" class="alignleft post_thumbnail wp-post-image" alt="{{ article.title }}"></a>
+                <a href="{{ SITEURL }}/{{ article.url }}" tabindex="-1"><img style="width:128px; height:128px;" src="{{ SITEURL }}/images/{{ article.featured_image }}" class="alignleft post_thumbnail wp-post-image" alt="{{ article.title }}"></a>
                 </td>
                 <td>
                     <h2 class="title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></h2>
                     <section>{{article.summary |striptags}}
-                    <a class="readmore" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="{{ article.title }}">Read More »</a>
+                    <a class="readmore" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="{{ article.title }}" tabindex="-1">Read More »</a>
                     </section>
                 </td>
                 </tr>
