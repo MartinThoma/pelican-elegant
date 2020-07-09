@@ -95,9 +95,9 @@
             {% if loop.index0 < RECENT_ARTICLES_COUNT %}
             <article>
                 <!--
-                <a href="{{ SITEURL }}/{{ article.url }}" tabindex="-1"><img style="width:128px; height:128px;" src="{{ SITEURL }}/images/{{ article.featured_image }}" class="alignleft post_thumbnail wp-post-image" alt="{{ article.title }}"></a>
-                <h2 class="title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></h2>
-                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
+                <a href="{{ article.url }}" tabindex="-1"><img style="width:128px; height:128px;" src="{{ SITEURL }}/images/{{ article.featured_image }}" class="alignleft post_thumbnail wp-post-image" alt="{{ article.title }}"></a>
+                <h2 class="title"><a href="{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a></h2>
+                <a href="{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
                 <section>
                     posted in
                 <a href="{{ SITEURL }}/categories.html#{{ article.category.slug }}-ref">{{ article.category }}</a>

@@ -52,7 +52,7 @@ Full archives of {{ SITENAME|striptags|e }} blog.
                 {% else %}
                     <article>
                 {% endif %}
-                <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
+                <a href="{{ article.url }}">{{ article.title }} {%if article.subtitle %} <small> {{ article.subtitle }} </small> {% endif %} </a>
                 <time pubdate="pubdate" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
                 </article>
             {% endfor %}
