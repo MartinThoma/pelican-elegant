@@ -21,10 +21,11 @@
 {% endblock meta_tags_in_head %}
 
 {% block content %}
+<!-- page.html -->
 <article>
 <div class="row">
     <header class="page-header col-sm-10 col-md-10 col-md-offset-2">
-    <h1><a href="{{ SITEURL }}"> {{ page.title }} {%if page.subtitle %} <small> {{ page.subtitle }} </small> {% endif %} </a></h1>
+    <h1><a href="{% if page.url.startswith('http') %}{{ page.url }}{% else %}{{ SITEURL }}/{{ page.url }}{% endif %}">{{ page.title }}{%if page.subtitle %} <small>{{ page.subtitle }}</small>{% endif %}</a></h1>
     </header>
 </div>
 
