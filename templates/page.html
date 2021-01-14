@@ -43,8 +43,10 @@
             {% endif %}
 
             {{ page.content }}
+            {% if not page.disable_comments %}
             {% from '_includes/comments.html' import comments with context %}
             {{ comments(page) }}
+            {% endif %}
         </div>
         <section>
         <div class="col-sm-2 col-md-2 no-print" style="float:right;font-size:0.9em;">
